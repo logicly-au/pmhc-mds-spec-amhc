@@ -1,0 +1,72 @@
+{
+  "@id": "amhc-service-contact-metadata.json",
+  "@context": { "http://www.w3.org/ns/csvw": { "@language": "en" } },
+  "columns": [{
+    "name": "organisation_path",
+    "titles": [ "organisation_path" ],
+    "dc:title": "Organisation Path",
+    "schema:description": "A sequence of colon separated Organisation Keys that fully specifies the Provider Organisation providing a service to the client.",
+    "schema:disambiguatingDescription": "type/organisation_path.rst",
+    "schema:dateCreated": "2016-06-22",
+    "schema:dateModified": "2016-06-22",
+    "datatype": {
+      "base": "string"
+    },
+    "required": true
+  },{
+    "name": "service_contact_key",
+    "titles": [ "service_contact_key" ],
+    "dc:title": "Service Contact Key",
+    "schema:description": "This is a number or code assigned to each service contact. The Service Contact Key is unique and stable for each service contact at the level of the organisation.",
+    "schema:disambiguatingDescription": "table/service-contact/key.rst",
+    "schema:dateCreated": "2016-06-22",
+    "schema:dateModified": "2016-06-22",
+    "datatype": {
+      "base": "string",
+      "minLength": 2,
+      "maxLength": 50
+    },
+    "required": true
+  },{
+    "name": "service_contact_start_time",
+    "titles": [ "service_contact_start_time" ],
+    "dc:title": "AMHC - Service Contact - Start Time",
+    "schema:description": "The start time of each mental health service contact between a health service provider and patient/client.",
+    "schema:disambiguatingDescription": "table/amhc-service-contact/start-time.rst",
+    "schema:dateCreated": "2020-09-19",
+    "schema:dateModified": "2020-09-19",
+    "datatype": {
+      "base": "time",
+      "format": "H:mm"
+    },
+    "schema:dateMissingUnknown": "9999-09-09",
+    "required": true
+  },{
+    "name": "service_contact_practitioner_category",
+    "titles": [ "service_contact_practitioner_category" ],
+    "dc:title": "AMHC - Service Contact - Practitioner Category",
+    "schema:description": "The types or categories of the practitioners, as represented by a set of codes.",
+    "schema:disambiguatingDescription": "table/amhc-service-contact/practitioner-category.rst",
+    "schema:dateCreated": "2020-09-19",
+    "schema:dateModified": "2020-09-19",
+    "separator": " ",
+    "datatype": {
+      "base": "string"
+    },
+    "required": true
+  }],
+  "primaryKey": [ "organisation_path", "service_contact_key" ],
+  "foreignKeys": [{
+    "columnReference": [ "organisation_path", "service_contact_key" ],
+    "reference": {
+      "resource": "data/service-contacts.csv",
+      "columnReference": [ "organisation_path", "service_contact_key" ]
+    }
+  }, {
+    "columnReference": "service_contact_practitioner_category",
+    "reference": {
+      "resource": "table/amhc-service-contact/practitioner-category.csv",
+      "columnReference": "id"
+    }
+  }]
+}

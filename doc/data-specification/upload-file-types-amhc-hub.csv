@@ -1,0 +1,12 @@
+File Type,CSV filename,Excel worksheet name,Required
+:ref:`Metadata <metadata-format>`,metadata.csv,Metadata,Required
+:ref:`Organisations <organisation-format>`,organisations.csv,Organisations,Optional and only available to PHN users if the user has the Organisation Management role
+:ref:`Clients <client-format>`,clients.csv,Clients,Optional
+:ref:`Episodes <episode-format>`,episodes.csv,Episodes,Optional
+:ref:`AMHC Episodes <amhc-episode-format>`,amhc-episodes.csv,AMHC Episodes,Required
+:ref:`Collection Occasions <collection-occasion-format>`,collection-occasions.csv,Collection Occasions,Required
+:ref:`K10+ Measures <k10p-format>`,k10p.csv,K10+,Required
+:ref:`K5 Measures <k5-format>`,k5.csv,K5,Required
+:ref:`SDQ Measures <sdq-format>`,sdq.csv,SDQ,Required
+:ref:`Service Contacts <service-contact-format>`,service-contacts.csv,Service Contacts,
+:ref:`AMHC Service Contacts <amhc-service-contact-format>`,amhc-service-contacts.csv,AMHC Service Contacts,Required

@@ -1,0 +1,22 @@
+{
+  "@id": "type/unknown.json",
+  "@context": { "http://www.w3.org/ns/csvw": { "@language": "en" } },
+  "columns": [{
+    "name": "id",
+    "titles": [ "id" ],
+    "schema:dateCreated": "2020-01-31",
+    "schema:dateDeleted": "2020-01-31",
+    "schema:dateModified": "2020-01-31",
+    "datatype": "string"
+  },{
+    "name": "description",
+    "titles": [ "description" ],
+    "schema:dateCreated": "2020-01-31",
+    "schema:dateDeleted": "2020-01-31",
+    "schema:dateModified": "2020-01-31",
+    "datatype": {
+      "base": "string"
+    }
+  }],
+  "primaryKey": "id"
+}

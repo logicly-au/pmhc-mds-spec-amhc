@@ -1,0 +1,47 @@
+"Data Element (Field Name)","Type (min,max)",Required,"Format / Values"
+"`Organisation Path`_ (organisation_path)
+
+",string,yes,"A sequence of colon separated Organisation Keys that fully specifies the Provider Organisation providing a service to the client."
+"`Episode Key`_ (episode_key)
+
+","string (2,50)",yes,"This is a number or code assigned to each PMHC MDS episode. The Episode Key is unique and stable for each episode at the level of the organisation. This key must link to an existing episode within the PMHC MDS."
+"`HeadtoHelp Episode - Intake Organisation Path`_ (intake_organisation_path)
+
+",string,"—","A sequence of colon separated Organisation Keys that fully specifies the Intake Organisation that referred the client to the hub service. In conjuctionion with the intake episode key, this allows linkage from the hub episode back to the intake episode.
+
+This will be blank in the context of the intake organisation."
+"`HeadtoHelp Episode - Intake Episode Key`_ (intake_episode_key)
+
+","string (2,50)","—","This is a number or code assigned to the intake episode organisation. The Episode Key is unique and stable for each episode at the level of the intake organisation. In conjuctionion with the intake organisation path, this allows linkage from the hub episode back to the intake episode.
+
+This will be blank in the context of the intake organisation."
+"`HeadtoHelp Episode - Referral Out Organisation Type`_ (referral_out_organisation_type)
+
+",string,yes,":0: None/Not applicable
+:1: General Practice
+:2: Medical Specialist Consulting Rooms
+:3: Private practice
+:4: Public mental health service
+:5: Public Hospital
+:6: Private Hospital
+:7: Emergency Department
+:8: Community Health Centre
+:9: Drug and Alcohol Service
+:10: Community Support Organisation NFP
+:11: Indigenous Health Organisation
+:12: Child and Maternal Health
+:13: Nursing Service
+:14: Telephone helpline
+:15: Digital health service
+:16: Family Support Service
+:17: School
+:18: Tertiary Education institution
+:19: Housing service
+:20: Centrelink
+:21: Other
+:22: HeadtoHelp Hub
+:23: Non HeadtoHelp Hub PHN funded service
+:99: Not stated
+
+Multiple space separated values allowed
+"

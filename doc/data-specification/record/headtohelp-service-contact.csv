@@ -1,0 +1,30 @@
+"Data Element (Field Name)","Type (min,max)",Required,"Format / Values"
+"`Organisation Path`_ (organisation_path)
+
+",string,yes,"A sequence of colon separated Organisation Keys that fully specifies the Provider Organisation providing a service to the client."
+"`Service Contact Key`_ (service_contact_key)
+
+","string (2,50)",yes,"This is a number or code assigned to each service contact. The Service Contact Key is unique and stable for each service contact at the level of the organisation."
+"`HeadtoHelp - Service Contact - Start Time`_ (service_contact_start_time)
+
+",time,yes,"The start time of each mental health service contact between a health service provider and patient/client."
+"`HeadtoHelp - Service Contact - Practitioner Category`_ (service_contact_practitioner_category)
+
+",string,yes,":0: None
+:1: Clinical Psychologist
+:2: General Psychologist
+:3: Social Worker
+:4: Occupational Therapist
+:5: Mental Health Nurse
+:6: Aboriginal and Torres Strait Islander Health/Mental Health Worker
+:7: Low Intensity Mental Health Worker
+:8: General Practitioner
+:9: Psychiatrist
+:10: Other Medical
+:11: Other
+:12: Psychosocial Support Worker
+:13: Peer Support Worker
+:99: Not stated
+
+Multiple space separated values allowed
+"

@@ -1,0 +1,84 @@
+{
+  "@id": "amhc-episode-metadata.json",
+  "@context": { "http://www.w3.org/ns/csvw": { "@language": "en" } },
+  "columns": [{
+    "name": "organisation_path",
+    "titles": [ "organisation_path" ],
+    "dc:title": "Organisation Path",
+    "schema:description": "A sequence of colon separated Organisation Keys that fully specifies the Provider Organisation providing a service to the client.",
+    "schema:disambiguatingDescription": "type/organisation_path.rst",
+    "schema:dateCreated": "2016-06-22",
+    "schema:dateModified": "2016-06-22",
+    "datatype": {
+      "base": "string"
+    },
+    "required": true
+  },{
+    "name": "episode_key",
+    "titles": [ "episode_key" ],
+    "dc:title": "Episode Key",
+    "schema:description": "This is a number or code assigned to each PMHC MDS episode. The Episode Key is unique and stable for each episode at the level of the organisation. This key must link to an existing episode within the PMHC MDS.",
+    "schema:disambiguatingDescription": "table/episode/key.rst",
+    "schema:dateCreated": "2016-06-22",
+    "schema:dateModified": "2016-07-08",
+    "datatype": {
+      "base": "string",
+      "minLength": 2,
+      "maxLength": 50
+    },
+    "required": true
+  },{
+    "name": "intake_organisation_path",
+    "titles": [ "intake_organisation_path" ],
+    "dc:title": "AMHC Episode - Intake Organisation Path",
+    "schema:description": "A sequence of colon separated Organisation Keys that fully specifies the Intake Organisation that referred the client to the hub service. In conjuctionion with the intake episode key, this allows linkage from the hub episode back to the intake episode.\n\nThis will be blank in the context of the intake organisation.",
+    "schema:disambiguatingDescription": "table/amhc-episode/intake-organisation-path.rst",
+    "schema:dateCreated": "2020-09-18",
+    "schema:dateModified": "2020-09-18",
+    "datatype": {
+      "base": "string"
+    },
+    "required": false
+  },{
+    "name": "intake_episode_key",
+    "titles": [ "intake_episode_key" ],
+    "dc:title": "AMHC Episode - Intake Episode Key",
+    "schema:description": "This is a number or code assigned to the intake episode organisation. The Episode Key is unique and stable for each episode at the level of the intake organisation. In conjuctionion with the intake organisation path, this allows linkage from the hub episode back to the intake episode.\n\nThis will be blank in the context of the intake organisation.",
+    "schema:disambiguatingDescription": "table/amhc-episode/intake-episode-key.rst",
+    "schema:dateCreated": "2020-09-18",
+    "schema:dateModified": "2020-09-18",
+    "datatype": {
+      "base": "string",
+      "minLength": 2,
+      "maxLength": 50
+    },
+    "required": false
+  },{
+    "name": "referral_out_organisation_type",
+    "titles": [ "referral_out_organisation_type" ],
+    "dc:title": "AMHC Episode - Referral Out Organisation Type",
+    "schema:description": "Type of organisation to which the client is being referred.",
+    "schema:disambiguatingDescription": "table/episode/referrer-organisation-type.rst",
+    "schema:dateCreated": "2020-09-18",
+    "schema:dateModified": "2020-09-18",
+    "separator": " ",
+    "datatype": {
+      "base": "string"
+    },
+    "required": true
+  }],
+  "primaryKey": [ "organisation_path", "episode_key" ],
+  "foreignKeys": [{
+    "columnReference": [ "organisation_path", "episode_key" ],
+    "reference": {
+      "resource": "data/episodes.csv",
+      "columnReference": [ "organisation_path", "episode_key" ]
+    }
+  }, {
+    "columnReference": "referral_out_organisation_type",
+    "reference": {
+      "resource": "table/amhc-episode/referral-out-organisation-type.csv",
+      "columnReference": "id"
+    }
+  }]
+}

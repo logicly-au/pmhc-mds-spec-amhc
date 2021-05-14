@@ -1,0 +1,8 @@
+.DS_Store
+.perl5
+_doc
+.doctree
+doc/__pycache__/
+version.txt
+doc/build
+doc/data-specification/include/table

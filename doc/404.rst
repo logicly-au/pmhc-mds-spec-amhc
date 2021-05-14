@@ -1,0 +1,8 @@
+:orphan:
+
+Error 404
+=========
+
+The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
+
+You may wish to return to the NSPT documentation home at https://docs.nspt.info/ or check for updates and announcements emails from the NSPT Project Team.
