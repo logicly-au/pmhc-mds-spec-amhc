@@ -85,7 +85,7 @@
   },{
     "name": "referral_date",
     "titles": [ "referral_date" ],
-    "dc:title": "Episode - Referral Date",
+    "dc:title": "Referral Date",
     "schema:description": "The date the referrer made the referral.",
     "schema:disambiguatingDescription": "table/episode/referral-date.rst",
     "schema:dateCreated": "2016-06-22",
@@ -333,12 +333,11 @@
   },{
     "name": "referrer_profession",
     "titles": [ "referrer_profession" ],
-    "dc:title": "Episode - Referrer Profession",
+    "dc:title": "Referrer Profession",
     "schema:description": "Profession of the provider who referred the client.",
-    "schema:disambiguatingDescription": "table/episode/referrer-profession.rst",
+    "schema:disambiguatingDescription": "type/referrer-profession.rst",
     "schema:dateCreated": "2016-06-22",
-    "schema:dateDeleted": "2016-06-22",
-    "schema:dateModified": "2016-06-22",
+    "schema:dateModified": "2021-05-14",
     "datatype": {
       "base": "string"
     },
@@ -346,12 +345,11 @@
   },{
     "name": "referrer_organisation_type",
     "titles": [ "referrer_organisation_type" ],
-    "dc:title": "Episode - Referrer Organisation Type",
+    "dc:title": "Referrer Organisation Type",
     "schema:description": "Type of organisation in which the referring professional is based.",
-    "schema:disambiguatingDescription": "table/episode/referrer-organisation-type.rst",
+    "schema:disambiguatingDescription": "type/referrer-organisation-type.rst",
     "schema:dateCreated": "2016-06-22",
-    "schema:dateDeleted": "2016-06-22",
-    "schema:dateModified": "2016-06-22",
+    "schema:dateModified": "2021-05-14",
     "datatype": {
       "base": "string"
     },
@@ -507,13 +505,13 @@
   }, {
     "columnReference": "referrer_profession",
     "reference": {
-      "resource": "table/episode/referrer-profession.csv",
+      "resource": "type/referrer-profession.csv",
       "columnReference": "id"
     }
   }, {
     "columnReference": "referrer_organisation_type",
     "reference": {
-      "resource": "table/episode/referrer-organisation-type.csv",
+      "resource": "type/referrer-organisation-type.csv",
       "columnReference": "id"
     }
   }, {

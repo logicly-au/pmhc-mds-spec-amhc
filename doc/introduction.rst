@@ -58,7 +58,7 @@ back to the intake record at the intake organisation.
 
 The values of these fields should be passed along by the intake organisation
 to the hub organisation where the hub organisation will use them to fill in
-:ref:`dfn-intake-organisation-key` and :ref:`dfn-intake-episode-key`. This will
+:ref:`dfn-intake_organisation_path` and :ref:`dfn-intake_episode_key`. This will
 then link the intake record at the intake organisation with the AMHC Episode
 record at the hub organisation.
 

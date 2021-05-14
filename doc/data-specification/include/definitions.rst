@@ -62,62 +62,6 @@ This will be blank in the context of the intake organisation.
 
 ----------
 
-.. _dfn-referral_out_organisation_type:
-
-AMHC Episode - Referral Out Organisation Type
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Type of organisation to which the client is being referred.
-
-:Field name: referral_out_organisation_type
-
-:Data type: string
-
-:Required: yes
-
-:Domain:
-  :0: None/Not applicable
-  :1: General Practice
-  :2: Medical Specialist Consulting Rooms
-  :3: Private practice
-  :4: Public mental health service
-  :5: Public Hospital
-  :6: Private Hospital
-  :7: Emergency Department
-  :8: Community Health Centre
-  :9: Drug and Alcohol Service
-  :10: Community Support Organisation NFP
-  :11: Indigenous Health Organisation
-  :12: Child and Maternal Health
-  :13: Nursing Service
-  :14: Telephone helpline
-  :15: Digital health service
-  :16: Family Support Service
-  :17: School
-  :18: Tertiary Education institution
-  :19: Housing service
-  :20: Centrelink
-  :21: Other
-  :22: HeadtoHelp Hub
-  :23: Non HeadtoHelp Hub PHN funded service
-  :99: Not stated
-  
-  Multiple space separated values allowed
-  
-:Notes:
-  Medical Specialist Consulting Rooms includes private medical practitioner rooms
-  in public or private hospital or other settings.
-  
-  Public mental health service refers to a state- or territory-funded specialised
-  mental health services (i.e., specialised mental health care delivered in
-  public acute and psychiatric hospital settings, community mental health care
-  services, and s specialised residential mental health care services).
-  
-  Not applicable should only be selected in instances of Self referral.
-  
-
-----------
-
 .. _dfn-service_contact_practitioner_category:
 
 AMHC - Service Contact - Practitioner Category
@@ -1329,122 +1273,6 @@ The range of activities that best describes the overall services intended to be 
 
 ----------
 
-.. _dfn-referral_date:
-
-Episode - Referral Date
-^^^^^^^^^^^^^^^^^^^^^^^
-
-The date the referrer made the referral.
-
-:Field name: referral_date
-
-:Data type: date
-
-:Required: no
-:Notes:
-  For Date fields, data must be recorded in compliance with the standard format
-  used across the National Health Data Dictionary; specifically, dates must be
-  of fixed 8 column width in the format DDMMYYYY, with leading zeros used when
-  necessary to pad out a value. For instance, 13th March 2008 would appear as
-  13032008.
-  
-  - The referral date must not be before 1st January 2014.
-  
-  - The referral date must not be in the future.
-  
-
-----------
-
-.. _dfn-referrer_organisation_type:
-
-Episode - Referrer Organisation Type
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Type of organisation in which the referring professional is based.
-
-:Field name: referrer_organisation_type
-
-:Data type: string
-
-:Required: yes
-
-:Domain:
-  :1: General Practice
-  :2: Medical Specialist Consulting Rooms
-  :3: Private practice
-  :4: Public mental health service
-  :5: Public Hospital
-  :6: Private Hospital
-  :7: Emergency Department
-  :8: Community Health Centre
-  :9: Drug and Alcohol Service
-  :10: Community Support Organisation NFP
-  :11: Indigenous Health Organisation
-  :12: Child and Maternal Health
-  :13: Nursing Service
-  :14: Telephone helpline
-  :15: Digital health service
-  :16: Family Support Service
-  :17: School
-  :18: Tertiary Education institution
-  :19: Housing service
-  :20: Centrelink
-  :21: Other
-  :98: N/A - Self referral
-  :99: Not stated
-:Notes:
-  Medical Specialist Consulting Rooms includes private medical practitioner rooms
-  in public or private hospital or other settings.
-  
-  Public mental health service refers to a state- or territory-funded specialised
-  mental health services (i.e., specialised mental health care delivered in
-  public acute and psychiatric hospital settings, community mental health care
-  services, and s specialised residential mental health care services).
-  
-  Not applicable should only be selected in instances of Self referral.
-  
-
-----------
-
-.. _dfn-referrer_profession:
-
-Episode - Referrer Profession
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Profession of the provider who referred the client.
-
-:Field name: referrer_profession
-
-:Data type: string
-
-:Required: yes
-
-:Domain:
-  :1: General Practitioner
-  :2: Psychiatrist
-  :3: Obstetrician
-  :4: Paediatrician
-  :5: Other Medical Specialist
-  :6: Midwife
-  :7: Maternal Health Nurse
-  :8: Psychologist
-  :9: Mental Health Nurse
-  :10: Social Worker
-  :11: Occupational therapist
-  :12: Aboriginal Health Worker
-  :13: Educational professional
-  :14: Early childhood service worker
-  :15: Other
-  :98: N/A - Self referral
-  :99: Not stated
-:Notes:
-  New arrangements for some services delivered in primary mental health care
-  allows clients to refer themselves for treatment. Therefore, 'Self'
-  is a response option included within 'Referrer profession'.
-  
-
-----------
-
 .. _dfn-income_source:
 
 Episode - Source of Cash Income
@@ -1805,6 +1633,210 @@ IAR-DST - Tags
 List of tags for the measure.
 
 :Field name: iar_dst_tags
+
+:Data type: string
+
+:Required: no
+:Notes:
+  A comma separated list of tags.
+  
+  Organisations can use this field to tag records in order to partition them as
+  per local requirements.
+  
+  Tags can contain lower case letters (or will get lowercased), numbers, dashes,
+  spaces, and ``!``. Leading and trailing spaces will be stripped. e.g. ``priority!,
+  nurse required, pending-outcome-1`` would all be legitimate.
+  
+  Tags beginning with an exclamation mark (!) are reserved for future use by the
+  Department. e.g. ``!reserved, ! reserved, !department-use-only``.
+  
+
+----------
+
+.. _dfn-intake_collection_occasion_tags:
+
+Intake Collection Occasion - Tags
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+List of tags for the collection occasion.
+
+:Field name: intake_collection_occasion_tags
+
+:Data type: string
+
+:Required: no
+:Notes:
+  A comma separated list of tags.
+  
+  Organisations can use this field to tag records in order to partition them as
+  per local requirements.
+  
+  Tags can contain lower case letters (or will get lowercased), numbers, dashes,
+  spaces, and ``!``. Leading and trailing spaces will be stripped. e.g. ``priority!,
+  nurse required, pending-outcome-1`` would all be legitimate.
+  
+  Tags beginning with an exclamation mark (!) are reserved for future use by the
+  Department. e.g. ``!reserved, ! reserved, !department-use-only``.
+  
+
+----------
+
+.. _dfn-intake_collection_occasion_key:
+
+Intake Collection Occasion Key
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This is a number or code assigned to each intake collection occasion of service activities. The Intake Collection Occasion Key is unique and stable for each intake collection occasion at the level of the organisation.
+
+:Field name: intake_collection_occasion_key
+
+:Data type: string (2,50)
+
+:Required: yes
+:Notes:
+  Intake Collection Occasion keys are case sensitive and must be valid unicode characters.
+  
+
+----------
+
+.. _dfn-contact_date:
+
+Intake - Contact Date
+^^^^^^^^^^^^^^^^^^^^^
+
+The date on which the client first contacted the intake service
+
+:Field name: contact_date
+
+:Data type: date
+
+:Required: no
+:Notes:
+  For Date fields, data must be recorded in compliance with the standard format
+  used across the National Health Data Dictionary; specifically, dates must be
+  of fixed 8 column width in the format DDMMYYYY, with leading zeros used when
+  necessary to pad out a value. For instance, 13th March 2008 would appear as
+  13032008.
+  
+  - The contact date must not be before 1st January 2020.
+  
+  - The contact date must not be in the future.
+  
+
+----------
+
+.. _dfn-intake_funding_source:
+
+Intake - Funding Source
+^^^^^^^^^^^^^^^^^^^^^^^
+
+The source of funding for the intake
+
+:Field name: intake_funding_source
+
+:Data type: string
+
+:Required: yes
+
+:Domain:
+  :1: HeadtoHelp
+  :2: AMHC
+
+----------
+
+.. _dfn-intake_key:
+
+Intake Key
+^^^^^^^^^^
+
+This is a number or code assigned to each intake. The Intake Key is unique and stable for each intake at the level of the organisation.
+
+:Field name: intake_key
+
+:Data type: string (2,50)
+
+:Required: yes
+:Notes:
+  Intake Keys must be generated by the organisation to be unique at the provider
+  organisation level and must persist across time. Creation of intake keys in
+  this way allows clients to be merged (where duplicate Client Keys have been
+  identified) without having to re-allocate intake identifiers since they can
+  never clash.
+  
+  A recommended approach for the creation of Intake Keys is to compute `random
+  UUIDs <https://en.wikipedia.org/wiki/Universally_unique_identifier>`_.
+  
+
+----------
+
+.. _dfn-outcome:
+
+Intake - Outcome
+^^^^^^^^^^^^^^^^
+
+An indication of the completion status of an *Intake*.
+
+:Field name: outcome
+
+:Data type: string
+
+:Required: no
+
+:Domain:
+  :0: Intake open
+  :1: Intake closed - client did not require service
+  :2: Intake closed - client referred to a clinic
+:Notes:
+  1 - Intake closed - client did not require service
+    The client has been discharged not requiring service.
+  
+  2 - Intake closed - client referred to a clinic
+    Client was referred to either an AMHC hub clinic, an AMHC non hub clinic or
+    non PMHC MDS funded clinic.
+  
+  *Intake Outcome* interacts *Outcome Date*.
+  
+  *Outcome Date*
+    Where a closed outcome was recorded the Outcome Date should be
+    recorded as the date of the intake was closed.
+  
+
+----------
+
+.. _dfn-outcome_date:
+
+Intake - Outcome Date
+^^^^^^^^^^^^^^^^^^^^^
+
+The date the intake had an outcome
+
+:Field name: outcome_date
+
+:Data type: date
+
+:Required: no
+:Notes:
+  - The outcome date must not be before 1st January 2020.
+  
+  - The outcome end date must not be in the future.
+  
+  *Outcome Date* interacts with *Outcome*.
+  
+  *Outcome*
+    This field should be recorded as one of the intake closed options when an
+    *Outcome Date* is recorded.
+  
+
+----------
+
+.. _dfn-intake_tags:
+
+Intake - Tags
+^^^^^^^^^^^^^
+
+List of tags for the intake.
+
+:Field name: intake_tags
 
 :Data type: string
 
@@ -2506,6 +2538,178 @@ A unique identifier for a practitioner within the provider organisation.
 :Data type: string (2,50)
 
 :Required: yes
+
+----------
+
+.. _dfn-referral_date:
+
+Referral Date
+^^^^^^^^^^^^^
+
+The date the referrer made the referral to the intake service.
+
+:Field name: referral_date
+
+:Data type: date
+
+:Required: no
+:Notes:
+  For Date fields, data must be recorded in compliance with the standard format
+  used across the National Health Data Dictionary; specifically, dates must be
+  of fixed 8 column width in the format DDMMYYYY, with leading zeros used when
+  necessary to pad out a value. For instance, 13th March 2008 would appear as
+  13032008.
+  
+  - The referral date must not be before 1st January 2014.
+  
+  - The referral date must not be in the future.
+  
+
+----------
+
+.. _dfn-referral_out_organisation_type:
+
+Referral Out Organisation Type
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Type of organisation to which the client is being referred.
+
+:Field name: referral_out_organisation_type
+
+:Data type: string
+
+:Required: yes
+
+:Domain:
+  :0: None/Not applicable
+  :1: General Practice
+  :2: Medical Specialist Consulting Rooms
+  :3: Private practice
+  :4: Public mental health service
+  :5: Public Hospital
+  :6: Private Hospital
+  :7: Emergency Department
+  :8: Community Health Centre
+  :9: Drug and Alcohol Service
+  :10: Community Support Organisation NFP
+  :11: Indigenous Health Organisation
+  :12: Child and Maternal Health
+  :13: Nursing Service
+  :14: Telephone helpline
+  :15: Digital health service
+  :16: Family Support Service
+  :17: School
+  :18: Tertiary Education institution
+  :19: Housing service
+  :20: Centrelink
+  :21: Other
+  :22: HeadtoHelp Hub
+  :23: Non HeadtoHelp Hub PHN funded service
+  :99: Not stated
+  
+  Multiple space separated values allowed
+  
+:Notes:
+  Medical Specialist Consulting Rooms includes private medical practitioner rooms
+  in public or private hospital or other settings.
+  
+  Public mental health service refers to a state- or territory-funded specialised
+  mental health services (i.e., specialised mental health care delivered in
+  public acute and psychiatric hospital settings, community mental health care
+  services, and s specialised residential mental health care services).
+  
+  Not applicable should only be selected in instances of Self referral.
+  
+
+----------
+
+.. _dfn-referrer_organisation_type:
+
+Referrer Organisation Type
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Type of organisation in which the referring professional is based.
+
+:Field name: referrer_organisation_type
+
+:Data type: string
+
+:Required: yes
+
+:Domain:
+  :1: General Practice
+  :2: Medical Specialist Consulting Rooms
+  :3: Private practice
+  :4: Public mental health service
+  :5: Public Hospital
+  :6: Private Hospital
+  :7: Emergency Department
+  :8: Community Health Centre
+  :9: Drug and Alcohol Service
+  :10: Community Support Organisation NFP
+  :11: Indigenous Health Organisation
+  :12: Child and Maternal Health
+  :13: Nursing Service
+  :14: Telephone helpline
+  :15: Digital health service
+  :16: Family Support Service
+  :17: School
+  :18: Tertiary Education institution
+  :19: Housing service
+  :20: Centrelink
+  :21: Other
+  :98: N/A - Self referral
+  :99: Not stated
+:Notes:
+  Medical Specialist Consulting Rooms includes private medical practitioner rooms
+  in public or private hospital or other settings.
+  
+  Public mental health service refers to a state- or territory-funded specialised
+  mental health services (i.e., specialised mental health care delivered in
+  public acute and psychiatric hospital settings, community mental health care
+  services, and s specialised residential mental health care services).
+  
+  Not applicable should only be selected in instances of Self referral.
+  
+
+----------
+
+.. _dfn-referrer_profession:
+
+Referrer Profession
+^^^^^^^^^^^^^^^^^^^
+
+Profession of the provider who referred the client.
+
+:Field name: referrer_profession
+
+:Data type: string
+
+:Required: yes
+
+:Domain:
+  :1: General Practitioner
+  :2: Psychiatrist
+  :3: Obstetrician
+  :4: Paediatrician
+  :5: Other Medical Specialist
+  :6: Midwife
+  :7: Maternal Health Nurse
+  :8: Psychologist
+  :9: Mental Health Nurse
+  :10: Social Worker
+  :11: Occupational therapist
+  :12: Aboriginal Health Worker
+  :13: Educational professional
+  :14: Early childhood service worker
+  :15: Other
+  :98: N/A - Self referral
+  :99: Not stated
+:Notes:
+  New arrangements for some services delivered in primary mental health care
+  allows clients to refer themselves for treatment. Therefore, 'Self'
+  is a response option included within 'Referrer profession'.
+  
 
 ----------
 

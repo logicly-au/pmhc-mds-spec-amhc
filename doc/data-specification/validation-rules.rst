@@ -15,13 +15,13 @@ The domain of individual AMHC items is defined in :ref:`record-formats`.
 Current AMHC validations
 ------------------------
 
-.. amhc-episode-current-validations:
+.. _amhc-episode-current-validations:
 
 1. AMHC - Episode
 ~~~~~~~~~~~~~~~~~
 
 1. :ref:`dfn-episode_key` must be an existing PMHC episode within the PMHC MDS.
-2. ``!covid19`` tag should be included in the
+2. ``!amhc`` tag should be included in the
    `Episode - Tags <https://docs.pmhc-mds.com/data-specification/data-model-and-specifications.html#episode-tags>`_
    field of the corresponding PMHC episode, otherwise the system will
    automatically include it.

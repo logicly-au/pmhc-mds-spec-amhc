@@ -1,0 +1,16 @@
+"Data Element (Field Name)","Type (min,max)",Required,"Format / Values"
+"`Organisation Path`_ (organisation_path)
+
+",string,yes,"A sequence of colon separated Organisation Keys that fully specifies the Provider Organisation providing a service to the client."
+"`Intake Collection Occasion Key`_ (intake_collection_occasion_key)
+
+","string (2,50)",yes,"This is a number or code assigned to each intake collection occasion of service activities. The Intake Collection Occasion Key is unique and stable for each intake collection occasion at the level of the organisation."
+"`Intake Key`_ (intake_key)
+
+","string (2,50)",yes,"This is a number or code assigned to each PMHC MDS intake. The Intake Key is unique and stable for each intake at the level of the organisation. This key must link to an existing intake within the PMHC MDS."
+"`Collection Occasion - Date`_ (collection_occasion_date)
+
+",date,yes,"The date of the collection occasion."
+"`Intake Collection Occasion - Tags`_ (intake_collection_occasion_tags)
+
+",string,"—","List of tags for the collection occasion."

@@ -1,0 +1,4 @@
+id,description
+0,"Intake open"
+1,"Intake closed - client did not require service"
+2,"Intake closed - client referred to a clinic"

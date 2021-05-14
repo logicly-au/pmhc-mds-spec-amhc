@@ -1,0 +1,74 @@
+{
+  "@id": "intake-collection-occasion-metadata.json",
+  "@context": { "http://www.w3.org/ns/csvw": { "@language": "en" } },
+  "columns": [{
+    "name": "organisation_path",
+    "titles": [ "organisation_path" ],
+    "dc:title": "Organisation Path",
+    "schema:description": "A sequence of colon separated Organisation Keys that fully specifies the Provider Organisation providing a service to the client.",
+    "schema:disambiguatingDescription": "type/organisation_path.rst",
+    "schema:dateCreated": "2021-05-14",
+    "datatype": {
+      "base": "string"
+    },
+    "required": true
+  },{
+    "name": "intake_collection_occasion_key",
+    "titles": [ "intake_collection_occasion_key" ],
+    "dc:title": "Intake Collection Occasion Key",
+    "schema:description": "This is a number or code assigned to each intake collection occasion of service activities. The Intake Collection Occasion Key is unique and stable for each intake collection occasion at the level of the organisation.",
+    "schema:disambiguatingDescription": "table/intake-collection-occasion/key.rst",
+    "schema:dateCreated": "2021-05-14",
+    "datatype": {
+      "base": "string",
+      "minLength": 2,
+      "maxLength": 50
+    },
+    "required": true
+  },{
+     "name": "intake_key",
+    "titles": [ "intake_key" ],
+    "dc:title": "Intake Key",
+    "schema:description": "This is a number or code assigned to each PMHC MDS intake. The Intake Key is unique and stable for each intake at the level of the organisation. This key must link to an existing intake within the PMHC MDS.",
+    "schema:disambiguatingDescription": "table/intake/key.rst",
+    "schema:dateCreated": "2021-05-14",
+    "datatype": {
+      "base": "string",
+      "minLength": 2,
+      "maxLength": 50
+    },
+    "required": true
+  },{
+    "name": "collection_occasion_date",
+    "titles": [ "collection_occasion_date" ],
+    "dc:title": "Collection Occasion - Date",
+    "schema:description": "The date of the collection occasion.",
+    "schema:disambiguatingDescription": "type/collection-occasion-date.rst",
+    "schema:dateCreated": "2021-05-14",
+    "datatype": {
+      "base": "date",
+      "format": "dMMyyyy",
+      "minimum": "2016-01-01"
+    },
+    "schema:dateMissingUnknown": "9999-09-09",
+    "required": true
+  },{
+    "name": "intake_collection_occasion_tags",
+    "titles": [ "intake_collection_occasion_tags" ],
+    "dc:title" : "Intake Collection Occasion - Tags",
+    "schema:description": "List of tags for the collection occasion.",
+    "schema:disambiguatingDescription": "type/tags.rst",
+    "schema:dateCreated": "2021-05-14",
+    "datatype": {
+      "base": "string"
+      }
+  }],
+  "primaryKey": [ "organisation_path", "intake_collection_occasion_key" ],
+  "foreignKeys": [{
+    "columnReference": [ "organisation_path", "intake_key" ],
+    "reference": {
+      "resource": "data/intakes.csv",
+      "columnReference": [ "organisation_path", "intake_key" ]
+    }
+  }]
+}

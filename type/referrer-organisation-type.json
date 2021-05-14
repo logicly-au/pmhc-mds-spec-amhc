@@ -1,19 +1,15 @@
 {
-  "@id": "table/episode/referrer-profession.json",
+  "@id": "type/referrer-organisation-type.json",
   "@context": { "http://www.w3.org/ns/csvw": { "@language": "en" } },
   "columns": [{
     "name": "id",
     "titles": [ "id" ],
-    "schema:dateCreated": "2016-06-22",
-    "schema:dateDeleted": "2016-06-22",
-    "schema:dateModified": "2016-06-22",
+    "schema:dateCreated": "2021-05-14",
     "datatype": "string"
   },{
     "name": "description",
     "titles": [ "description" ],
-    "schema:dateCreated": "2016-06-22",
-    "schema:dateDeleted": "2016-06-22",
-    "schema:dateModified": "2016-06-22",
+    "schema:dateCreated": "2021-05-14",
     "datatype": {
       "base": "string"
     }

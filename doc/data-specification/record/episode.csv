@@ -26,7 +26,7 @@
 :4: Episode closed administratively - client moved out of area
 :5: Episode closed administratively - client referred elsewhere
 :6: Episode closed administratively - other reason"
-"`Episode - Referral Date`_ (referral_date)
+"`Referral Date`_ (referral_date)
 
 ",date,"—","The date the referrer made the referral."
 "`Episode - Principal Focus of Treatment Plan`_ (principal_focus)
@@ -231,7 +231,7 @@
 ",string,yes,":1: Yes
 :2: No
 :9: Unknown"
-"`Episode - Referrer Profession`_ (referrer_profession)
+"`Referrer Profession`_ (referrer_profession)
 
 ",string,yes,":1: General Practitioner
 :2: Psychiatrist
@@ -250,7 +250,7 @@
 :15: Other
 :98: N/A - Self referral
 :99: Not stated"
-"`Episode - Referrer Organisation Type`_ (referrer_organisation_type)
+"`Referrer Organisation Type`_ (referrer_organisation_type)
 
 ",string,yes,":1: General Practice
 :2: Medical Specialist Consulting Rooms

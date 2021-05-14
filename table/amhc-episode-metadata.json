@@ -31,7 +31,7 @@
     "name": "intake_organisation_path",
     "titles": [ "intake_organisation_path" ],
     "dc:title": "AMHC Episode - Intake Organisation Path",
-    "schema:description": "A sequence of colon separated Organisation Keys that fully specifies the Intake Organisation that referred the client to the hub service. In conjuctionion with the intake episode key, this allows linkage from the hub episode back to the intake episode.\n\nThis will be blank in the context of the intake organisation.",
+    "schema:description": "A sequence of colon separated Organisation Keys that fully specifies the Intake Organisation that referred the client to the hub service. In conjuctionion with the intake key, this allows linkage from the hub episode back to the intake.",
     "schema:disambiguatingDescription": "table/amhc-episode/intake-organisation-path.rst",
     "schema:dateCreated": "2020-09-18",
     "schema:dateModified": "2020-09-18",
@@ -40,10 +40,10 @@
     },
     "required": false
   },{
-    "name": "intake_episode_key",
-    "titles": [ "intake_episode_key" ],
-    "dc:title": "AMHC Episode - Intake Episode Key",
-    "schema:description": "This is a number or code assigned to the intake episode organisation. The Episode Key is unique and stable for each episode at the level of the intake organisation. In conjuctionion with the intake organisation path, this allows linkage from the hub episode back to the intake episode.\n\nThis will be blank in the context of the intake organisation.",
+    "name": "intake_key",
+    "titles": [ "intake_key" ],
+    "dc:title": "AMHC Episode - Intake Key",
+    "schema:description": "This is a number or code assigned to the intake organisation. The Intake Key is unique and stable for each intake at the level of the intake organisation. In conjuctionion with the intake organisation path, this allows linkage from the hub episode back to the intake.",
     "schema:disambiguatingDescription": "table/amhc-episode/intake-episode-key.rst",
     "schema:dateCreated": "2020-09-18",
     "schema:dateModified": "2020-09-18",
@@ -56,9 +56,9 @@
   },{
     "name": "referral_out_organisation_type",
     "titles": [ "referral_out_organisation_type" ],
-    "dc:title": "AMHC Episode - Referral Out Organisation Type",
+    "dc:title": "Referral Out Organisation Type",
     "schema:description": "Type of organisation to which the client is being referred.",
-    "schema:disambiguatingDescription": "table/episode/referrer-organisation-type.rst",
+    "schema:disambiguatingDescription": "type/referrer-organisation-type.rst",
     "schema:dateCreated": "2020-09-18",
     "schema:dateModified": "2020-09-18",
     "separator": " ",
@@ -77,7 +77,7 @@
   }, {
     "columnReference": "referral_out_organisation_type",
     "reference": {
-      "resource": "table/amhc-episode/referral-out-organisation-type.csv",
+      "resource": "type/referral-out-organisation-type.csv",
       "columnReference": "id"
     }
   }]

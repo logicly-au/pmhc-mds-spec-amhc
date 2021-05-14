@@ -1,0 +1,187 @@
+{
+  "@id": "intake-metadata.json",
+  "@context": { "http://www.w3.org/ns/csvw": { "@language": "en" } },
+  "columns": [{
+    "name": "organisation_path",
+    "titles": [ "organisation_path" ],
+    "dc:title": "Organisation Path",
+    "schema:description": "A sequence of colon separated Organisation Keys that fully specifies the Provider Organisation providing a service to the client.",
+    "schema:disambiguatingDescription": "type/organisation_path.rst",
+    "schema:dateCreated": "2021-05-14",
+    "datatype": {
+      "base": "string"
+    },
+    "required": true
+  },{
+    "name": "intake_key",
+    "titles": [ "intake_key" ],
+    "dc:title": "Intake Key",
+    "schema:description": "This is a number or code assigned to each intake. The Intake Key is unique and stable for each intake at the level of the organisation.",
+    "schema:disambiguatingDescription": "table/intake/key.rst",
+    "schema:dateCreated": "2021-05-14",
+    "datatype": {
+      "base": "string",
+      "minLength": 2,
+      "maxLength": 50
+    },
+    "required": true
+  },{
+     "name": "client_key",
+    "titles": [ "client_key" ],
+    "dc:title": "Client Key",
+    "schema:description": "This is a number or code assigned to each individual referred to the commissioned organisation. The client identifier is unique and stable for each individual at the level of the PMHC top level organisation.",
+    "schema:dateCreated": "2021-05-14",
+    "datatype": {
+      "base": "string",
+      "minLength": 2,
+      "maxLength": 50
+      },
+    "required": true
+  },{
+    "name": "outcome",
+    "titles": [ "outcome" ],
+    "dc:title": "Intake - Outcome",
+    "schema:description": "An indication of the completion status of an *Intake*.",
+    "schema:disambiguatingDescription": "table/intake/outcome.rst",
+    "schema:dateCreated": "2021-05-14",
+    "datatype": {
+      "base": "string"
+    },
+    "default": "0"
+  },{
+    "name": "outcome_date",
+    "titles": [ "outcome_date" ],
+    "dc:title": "Intake - Outcome Date",
+    "schema:description": "The date the intake had an outcome",
+    "schema:disambiguatingDescription": "table/intake/outcome-date.rst",
+    "schema:dateCreated": "2021-05-14",
+    "datatype": {
+      "base": "date",
+      "format": "dMMyyyy",
+      "minimum": "2020-01-01"
+    }
+  },{
+    "name": "contact_date",
+    "titles": [ "contact_date" ],
+    "dc:title": "Intake - Contact Date",
+    "schema:description": "The date on which the client first contacted the intake service",
+    "schema:disambiguatingDescription": "table/intake/contact-date.rst",
+    "schema:dateCreated": "2021-05-14",
+    "datatype": {
+      "base": "date",
+      "format": "dMMyyyy",
+      "minimum": "2020-01-01"
+    }
+  },{
+    "name": "referral_date",
+    "titles": [ "referral_date" ],
+    "dc:title": "Referral Date",
+    "schema:description": "The date the referrer made the referral to the intake service.",
+    "schema:disambiguatingDescription": "type/referral-date.rst",
+    "schema:dateCreated": "2021-05-14",
+    "datatype": {
+      "base": "date",
+      "format": "dMMyyyy",
+      "minimum": "2020-01-01"
+    }
+  },{
+    "name": "referrer_profession",
+    "titles": [ "referrer_profession" ],
+    "dc:title": "Referrer Profession",
+    "schema:description": "Profession of the provider who referred the client.",
+    "schema:disambiguatingDescription": "type/referrer-profession.rst",
+    "schema:dateCreated": "2021-05-14",
+    "datatype": {
+      "base": "string"
+    },
+    "required": true
+  },{
+    "name": "referrer_organisation_type",
+    "titles": [ "referrer_organisation_type" ],
+    "dc:title": "Referrer Organisation Type",
+    "schema:description": "Type of organisation in which the referring professional is based.",
+    "schema:disambiguatingDescription": "type/referrer-organisation-type.rst",
+    "schema:dateCreated": "2021-05-14",
+    "datatype": {
+      "base": "string"
+    },
+    "required": true
+  },{
+    "name": "referral_out_organisation_type",
+    "titles": [ "referral_out_organisation_type" ],
+    "dc:title": "Referral Out Organisation Type",
+    "schema:description": "Type of organisation to which the client is being referred.",
+    "schema:disambiguatingDescription": "type/referrer-organisation-type.rst",
+    "schema:dateCreated": "2021-05-14",
+    "separator": " ",
+    "datatype": {
+      "base": "string"
+    },
+    "required": true
+  },{
+    "name": "intake_funding_source",
+    "titles": [ "intake_funding_source" ],
+    "dc:title": "Intake - Funding Source",
+    "schema:description": "The source of funding for the intake",
+    "schema:dateCreated": "2021-05-14",
+    "datatype": {
+      "base": "string"
+    },
+    "required": true
+  },{
+    "name": "intake_tags",
+    "titles": [ "intake_tags" ],
+    "dc:title" : "Intake - Tags",
+    "schema:description": "List of tags for the intake.",
+    "schema:disambiguatingDescription": "type/tags.rst",
+    "schema:dateCreated": "2021-05-14",
+    "datatype": {
+      "base": "string"
+      },
+    "required": false
+  }],
+  "primaryKey": [ "organisation_path", "intake_key" ],
+  "foreignKeys": [{
+    "columnReference": "outcome",
+    "reference": {
+      "resource": "table/intake/outcome.csv",
+      "columnReference": "id"
+    }
+  }, {
+    "columnReference": [ "organisation_path", "client_key" ],
+    "reference": {
+      "resource": "data/clients.csv",
+      "columnReference": [ "organisation_path", "client_key" ]
+    }
+  }, {
+    "columnReference": "funding_source",
+    "reference": {
+      "resource": "table/intake/intake-funding-source.csv",
+      "columnReference": "id"
+    }
+  }, {
+    "columnReference": "referrer_profession",
+    "reference": {
+      "resource": "type/referrer-profession.csv",
+      "columnReference": "id"
+    }
+  }, {
+    "columnReference": "referrer_organisation_type",
+    "reference": {
+      "resource": "type/referrer-organisation-type.csv",
+      "columnReference": "id"
+    }
+  }, {
+    "columnReference": "referral_out_organisation_type",
+    "reference": {
+      "resource": "type/referral-out-organisation-type.csv",
+      "columnReference": "id"
+    }
+  }, {
+    "columnReference": "intake_funding_source",
+    "reference": {
+      "resource": "table/intake/intake-funding-source.csv",
+      "columnReference": "id"
+    }
+  }]
+}

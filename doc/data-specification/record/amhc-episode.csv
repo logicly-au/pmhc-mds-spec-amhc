@@ -15,7 +15,7 @@ This will be blank in the context of the intake organisation."
 ","string (2,50)","—","This is a number or code assigned to the intake episode organisation. The Episode Key is unique and stable for each episode at the level of the intake organisation. In conjuctionion with the intake organisation path, this allows linkage from the hub episode back to the intake episode.
 
 This will be blank in the context of the intake organisation."
-"`AMHC Episode - Referral Out Organisation Type`_ (referral_out_organisation_type)
+"`Referral Out Organisation Type`_ (referral_out_organisation_type)
 
 ",string,yes,":0: None/Not applicable
 :1: General Practice

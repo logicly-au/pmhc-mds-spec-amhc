@@ -5,9 +5,9 @@
 "`Measure Key`_ (measure_key)
 
 ","string (2,50)",yes,"This is a number or code assigned to each instance of a measure. The Measure Key is unique and stable for each instance of a measure at the level of the organisation."
-"`Collection Occasion Key`_ (collection_occasion_key)
+"`Intake Collection Occasion Key`_ (intake_collection_occasion_key)
 
-","string (2,50)",yes,"This is a number or code assigned to each collection occasion of service activity. The Collection Occasion Key is unique and stable for each collection occasion at the level of the organisation."
+","string (2,50)",yes,"This is a number or code assigned to each intake collection occasion of service activity. The Intake Collection Occasion Key is unique and stable for each intake collection occasion at the level of the organisation."
 "`IAR-DST - Domain 1 - Symptom Severity and Distress (Primary Domain)`_ (iar_dst_domain_1)
 
 ",string,yes,":0: No problem in this domain

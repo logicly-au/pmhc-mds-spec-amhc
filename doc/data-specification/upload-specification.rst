@@ -245,6 +245,35 @@ Example hub client data:
 - `CSV Hub client file <../_static/hub/clients.csv>`_.
 - `XLSX Hub client worksheet <../_static/hub/AMHC-3-0-clients.xlsx>`_.
 
+.. _intake-format:
+
+Intake file format
+~~~~~~~~~~~~~~~~~~
+
+The intake file/worksheet is required to be uploaded each time.
+
+Data elements for the intake upload file/worksheet are defined at :ref:`intake-data-elements`.
+
+Example data:
+
+- `CSV intake file <../_static/intake/intakes.csv>`_.
+- `XLSX intake worksheet <../_static/intake/AMHC-3-0-intakes.xlsx>`_.
+
+.. _intake-collection-occasion-format:
+
+Intake Collection Occasion file format
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The Intake Collection Occasion file/worksheet is required to be uploaded each time.
+
+Data elements for the Intake Collection Occasion upload file/worksheet are defined at
+:ref:`intake-collection-occasion-data-elements`.
+
+Example Intake Collection Occasion data:
+
+- `CSV Intake Collection Occasion file <../_static/intake/intake-collection-occasions.csv>`_.
+- `XLSX Intake Collection Occasion worksheet <../_static/intake/AMHC-3-0-intake-collection-occasions.xlsx>`_.
+
 .. _episode-format:
 
 Episode file format

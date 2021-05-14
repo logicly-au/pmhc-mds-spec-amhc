@@ -3,5 +3,5 @@ File Type,CSV filename,Excel worksheet name,Required
 :ref:`Organisations <organisation-format>`,organisations.csv,Organisations,Optional and only available to PHN users if the user has the Organisation Management role
 :ref:`Clients <client-format>`,clients.csv,Clients,Optional
 :ref:`Intake <intake-format>`,intakes.csv,Intakes,Required
-:ref:`Intake Collection Occasion <intake-collection-occasion>`,intake-collection-occasions.csv,Intake Collection Occasions, Required
+:ref:`Intake Collection Occasion <intake-collection-occasion-format>`,intake-collection-occasions.csv,Intake Collection Occasions, Required
 :ref:`IAR-DST Measures <iar-dst-format>`,iar-dst.csv,IAR-DST,Required

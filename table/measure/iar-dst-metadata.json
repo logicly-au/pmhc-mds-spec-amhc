@@ -30,14 +30,13 @@
     },
     "required": true
   },{
-    "name": "collection_occasion_key",
-    "titles": [ "collection_occasion_key" ],
-    "dc:title": "Collection Occasion Key",
-    "schema:description": "This is a number or code assigned to each collection occasion of service activity. The Collection Occasion Key is unique and stable for each collection occasion at the level of the organisation.",
-    "schema:disambiguatingDescription": "table/collection-occasion/key.rst",
+    "name": "intake_collection_occasion_key",
+    "titles": [ "intake_collection_occasion_key" ],
+    "dc:title": "Intake Collection Occasion Key",
+    "schema:description": "This is a number or code assigned to each intake collection occasion of service activity. The Intake Collection Occasion Key is unique and stable for each intake collection occasion at the level of the organisation.",
+    "schema:disambiguatingDescription": "table/intake-collection-occasion/key.rst",
     "schema:dateCreated": "2016-06-22",
-    "schema:dateDeleted": "2016-06-22",
-    "schema:dateModified": "2016-06-22",
+    "schema:dateModified": "2020-05-14",
     "datatype": {
       "base": "string",
       "minLength": 2,
