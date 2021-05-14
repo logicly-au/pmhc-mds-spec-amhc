@@ -41,7 +41,7 @@ my $t = tie( %csvfiles, 'Tie::IxHash' );
     'Organisations'           => "organisations",
     'Clients'                 => "clients",
     'Episodes'                => "episodes",
-    'HeadtoHelp Episodes'     => "headtohelp-episodes",
+    'AMHC Episodes'           => "amhc-episodes",
     'Collection Occasions'    => "collection-occasions",
     'K10+'                    => "k10p",
     'K5'                      => "k5",
@@ -61,7 +61,7 @@ exit( 0 );
 
 sub make_workbooks {
   foreach my $worksheet ( keys( %csvfiles ) ) {
-    my $filename = 'HEADTOHELP-3-0-' . $csvfiles{$worksheet} . '.xlsx';
+    my $filename = 'AMHC-3-0-' . $csvfiles{$worksheet} . '.xlsx';
     create_workbook ( $filename, $worksheet );
   }
 
@@ -74,9 +74,9 @@ sub make_delete_workbook {
   # Can't delete organisations via upload so remove this worksheet from the example
   delete $csvfiles{'Organisations'};
 
-  my $worksheet = 'HeadtoHelp Episodes';
-  $csvfiles{$worksheet} = "headtohelp-episodes";
-  my $filename = 'HEADTOHELP-3-0-' . $csvfiles{$worksheet} . '-delete.xlsx';
+  my $worksheet = 'AMHC Episodes';
+  $csvfiles{$worksheet} = "amhc-episodes";
+  my $filename = 'AMHC-3-0-' . $csvfiles{$worksheet} . '-delete.xlsx';
   create_workbook( $filename, $worksheet );
 }
 

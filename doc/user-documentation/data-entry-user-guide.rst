@@ -92,7 +92,7 @@ available on the Data Entry tab to add a Client's AMHC Episode data, by followin
 4. Click on the 'Australian Government AMHC hubs (!covid19)' checkbox or
    type ``!covid19`` in the 'Tags' fields and press tab
 
-.. figure:: screen-shots/client-episodes-h2h-tag.png
+.. figure:: screen-shots/client-episodes-amhc-tag.png
    :alt: Client Episodes AMHC Tag
 
 5. Scroll to the bottom of the PMHC Episode
@@ -130,7 +130,7 @@ available on the Data Entry tab, by following these steps:
 Update the Client's AMHC Episode details. Mandatory fields are marked
 with an * . (Specification :ref:`AMHC Episode Data Elements <amhc-episode-data-elements>`)
 
-.. figure:: screen-shots/client-episodes-h2h-edit.png
+.. figure:: screen-shots/client-episodes-amhc-edit.png
    :alt: Client Episodes Edit Details
 
 5. Click the blue 'Save' button. (If you decide not to save changes, you can simply navigate away from this screen)

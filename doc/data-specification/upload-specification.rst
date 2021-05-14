@@ -141,7 +141,7 @@ When uploading AMHC data files for the Hub context only the
 following files/worksheets need to be uploaded to the PMHC MDS:
 
 .. csv-table:: Summary of Hub files to upload
-  :file: upload-file-types-amhcp-hub.csv
+  :file: upload-file-types-amhc-hub.csv
   :header-rows: 1
 
 All files must be internally consistent. An example of what this means

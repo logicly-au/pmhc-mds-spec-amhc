@@ -1,6 +1,6 @@
 *Intake Context*
 
-In the HeadtoHelp intake context, the Episode End Date must be recorded as the
+In the AMHC intake context, the Episode End Date must be recorded as the
 date when the referral is sent to the clinic.
 
 *Both Intake and Hub Contexts*

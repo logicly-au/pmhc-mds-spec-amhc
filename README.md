@@ -64,4 +64,4 @@ https://gh.sdintra.net/PMHC/csvw-metadata2rst
 
 ### Update example upload files
 
-The example upload files are stored in spec-headtohelp/data/_orig. The build script then moves them to the required location.
+The example upload files are stored in spec-amhc/data/_orig. The build script then moves them to the required location.
