@@ -179,7 +179,7 @@ AMHC Episodes are managed by the hub provider organisations via upload or
 data entry.
 
 Where available, the :ref:`dfn-intake_organisation_path` and
-:ref:`dfn-intake_episode_key` provide a link back to the intake record at the
+:ref:`dfn-intake_key` provide a link back to the intake record at the
 intake organisation.
 
 .. csv-table:: AMHC Episode record layout

@@ -36,7 +36,7 @@ Episode and Service contact activity is not submitted in this context.
 In the hub context the extension specification works almost the same as a
 service reporting via the core PMHC-MDS specification using the extension
 fields to identify additional detail regarding referrals in from the
-AMHC intake teams (:ref:`dfn-intake_organisation_path` and :ref:`dfn-intake_episode_key`),
+AMHC intake teams (:ref:`dfn-intake_organisation_path` and :ref:`dfn-intake_key`),
 referrals out to additional services (:ref:`dfn-referral_out_organisation_type`), and
 the involvement of additional practitioners involved in service
 contacts (:ref:`dfn-service_contact_practitioner_category`) which allows
@@ -58,7 +58,7 @@ back to the intake record at the intake organisation.
 
 The values of these fields should be passed along by the intake organisation
 to the hub organisation where the hub organisation will use them to fill in
-:ref:`dfn-intake_organisation_path` and :ref:`dfn-intake_episode_key`. This will
+:ref:`dfn-intake_organisation_path` and :ref:`dfn-intake_key`. This will
 then link the intake record at the intake organisation with the AMHC Episode
 record at the hub organisation.
 
@@ -79,7 +79,7 @@ back to a standard episode record on which all the standard information is
 recorded plus three new fields.
 
 1. The identifier of the intake team (:ref:`dfn-intake_organisation_path`)
-2. The episode identifier of the intake team (:ref:`dfn-intake_episode_key`)
+2. The episode identifier of the intake team (:ref:`dfn-intake_key`)
 3. The organisation(s) to which the organisation (intake team or hub) refers
    the client (:ref:`dfn-referral_out_organisation_type`)
 

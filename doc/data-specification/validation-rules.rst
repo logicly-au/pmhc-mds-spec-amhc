@@ -27,7 +27,7 @@ Current AMHC validations
    automatically include it.
 3. If a :ref:`dfn-intake_organisation_path` is specified, that organisation must
    be an existing organisation within the PMHC MDS.
-4. If a :ref:`dfn-intake_episode_key` is specified, a :ref:`dfn-intake_organisation_path`
+4. If a :ref:`dfn-intake_key` is specified, a :ref:`dfn-intake_organisation_path`
    must also be specified.
 5. :ref:`dfn-referral_out_organisation_type` is a multivalued field.
 

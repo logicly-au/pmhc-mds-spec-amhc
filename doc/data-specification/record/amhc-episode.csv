@@ -5,16 +5,12 @@
 "`Episode Key`_ (episode_key)
 
 ","string (2,50)",yes,"This is a number or code assigned to each PMHC MDS episode. The Episode Key is unique and stable for each episode at the level of the organisation. This key must link to an existing episode within the PMHC MDS."
-"`AMHC Episode - Intake Organisation Path`_ (intake_organisation_path)
+"`Intake Organisation Path`_ (intake_organisation_path)
 
-",string,"—","A sequence of colon separated Organisation Keys that fully specifies the Intake Organisation that referred the client to the hub service. In conjuctionion with the intake episode key, this allows linkage from the hub episode back to the intake episode.
+",string,"—","A sequence of colon separated Organisation Keys that fully specifies the Intake Organisation that referred the client to the hub service. In conjuctionion with the intake key, this allows linkage from the hub episode back to the intake."
+"`Intake Key`_ (intake_key)
 
-This will be blank in the context of the intake organisation."
-"`AMHC Episode - Intake Episode Key`_ (intake_episode_key)
-
-","string (2,50)","—","This is a number or code assigned to the intake episode organisation. The Episode Key is unique and stable for each episode at the level of the intake organisation. In conjuctionion with the intake organisation path, this allows linkage from the hub episode back to the intake episode.
-
-This will be blank in the context of the intake organisation."
+","string (2,50)","—","This is a number or code assigned to the intake organisation. The Intake Key is unique and stable for each intake at the level of the intake organisation. In conjuctionion with the intake organisation path, this allows linkage from the hub episode back to the intake."
 "`Referral Out Organisation Type`_ (referral_out_organisation_type)
 
 ",string,yes,":0: None/Not applicable

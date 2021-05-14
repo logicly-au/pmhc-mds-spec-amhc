@@ -30,7 +30,7 @@
   },{
     "name": "intake_organisation_path",
     "titles": [ "intake_organisation_path" ],
-    "dc:title": "AMHC Episode - Intake Organisation Path",
+    "dc:title": "Intake Organisation Path",
     "schema:description": "A sequence of colon separated Organisation Keys that fully specifies the Intake Organisation that referred the client to the hub service. In conjuctionion with the intake key, this allows linkage from the hub episode back to the intake.",
     "schema:disambiguatingDescription": "table/amhc-episode/intake-organisation-path.rst",
     "schema:dateCreated": "2020-09-18",
@@ -42,7 +42,7 @@
   },{
     "name": "intake_key",
     "titles": [ "intake_key" ],
-    "dc:title": "AMHC Episode - Intake Key",
+    "dc:title": "Intake Key",
     "schema:description": "This is a number or code assigned to the intake organisation. The Intake Key is unique and stable for each intake at the level of the intake organisation. In conjuctionion with the intake organisation path, this allows linkage from the hub episode back to the intake.",
     "schema:disambiguatingDescription": "table/amhc-episode/intake-episode-key.rst",
     "schema:dateCreated": "2020-09-18",
