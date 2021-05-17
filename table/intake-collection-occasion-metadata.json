@@ -48,7 +48,7 @@
     "datatype": {
       "base": "date",
       "format": "dMMyyyy",
-      "minimum": "2016-01-01"
+      "minimum": "2020-01-01"
     },
     "schema:dateMissingUnknown": "9999-09-09",
     "required": true

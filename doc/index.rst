@@ -17,8 +17,6 @@ Version |version|
 
    * :ref:`amhc-introduction`
    * :ref:`data-docs`
-   * :ref:`resources-docs`
-   * :ref:`user-docs`
    * :ref:`amhc-faqs`
 
 
@@ -47,6 +45,4 @@ Version |version|
 
    introduction
    data-specification/index
-   resources/index
-   user-documentation/index
    faqs/index

@@ -15,9 +15,65 @@ The domain of individual AMHC items is defined in :ref:`record-formats`.
 Current AMHC validations
 ------------------------
 
+1. Intake
+~~~~~~~~~
+
+.. _intake-current-validations:
+
+1. The :ref:`dfn-outcome_date` must not be before the :ref:`dfn-contact_date`
+2. The :ref:`dfn-outcome_date` must not be before the :ref:`dfn-referral_date`
+3. :ref:`dfn-referrer_organisation_type` must be set to
+   '98: N/A - Self referral' if and only if :ref:`dfn-referrer_profession` is also
+   '98: N/A - Self referral'
+4. A maximum of one intake shall be open per client
+5. Where the
+   :ref:`dfn-outcome` has been recorded using one of the
+   'Intake closed' responses (Response items 1 and 2), the intake must have
+   an :ref:`dfn-outcome_date`, and/or intakes that have an
+   :ref:`dfn-outcome_date` must have an :ref:`dfn-outcome`
+   recorded using one of the 'Intake closed' responses (Response items 1 and 2)
+6. The :ref:`dfn-outcome_date`
+
+   * must not be before 1 January 2020
+   * and must not be before `Provider Organisation - Start Date <https://docs.pmhc-mds.com/projects/data-specification/en/latest/data-model-and-specifications.html#provider-organisation-start-date>`_
+   * and must not be after `Provider Organisation - End Date <https://docs.pmhc-mds.com/projects/data-specification/en/latest/data-model-and-specifications.html#provider-organisation-end-date>`_
+   * and must not be in the future
+
+7. The :ref:`dfn-referral_date`
+
+   * must not be before 1 January 2020
+   * and must not be before `Provider Organisation - Start Date <https://docs.pmhc-mds.com/projects/data-specification/en/latest/data-model-and-specifications.html#provider-organisation-start-date>`_
+   * and must not be after `Provider Organisation - End Date <https://docs.pmhc-mds.com/projects/data-specification/en/latest/data-model-and-specifications.html#provider-organisation-end-date>`_
+   * and must not be in the future
+
+.. _intake-collection-occasion-current-validations:
+
+2. Intake Collection Occasion
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1. :ref:`dfn-intake_key` must be an existing PMHC intake within the PMHC MDS.
+2. The :ref:`dfn-collection_occasion_date`
+
+   * must not be before 1 January 2020
+   * and must not be before `Episode - Referral Date <https://docs.pmhc-mds.com/data-specification/data-model-and-specifications.html#episode-referral-date>`_
+   * and must not be before `Provider Organisation - Start Date <https://docs.pmhc-mds.com/projects/data-specification/en/latest/data-model-and-specifications.html#provider-organisation-start-date>`_
+   * and must not be after `Episode - End Date <https://docs.pmhc-mds.com/projects/data-specification/en/latest/data-model-and-specifications.html#episode-end-date>`_
+   * and must not be after `Provider Organisation - End Date <https://docs.pmhc-mds.com/projects/data-specification/en/latest/data-model-and-specifications.html#provider-organisation-end-date>`_
+   * and must not be in the future
+
+.. _iar-dst-current-validations:
+
+3. IAR-DST
+~~~~~~~~~~
+
+1. :ref:`dfn-intake_collection_occasion_key` must be an existing Intake
+   Collection Occasion within the PMHC MDS.
+2. Both all 8 domains and the level of care must be provided.
+3. The level of care must be consistent with the 8 domain scores provided.
+
 .. _amhc-episode-current-validations:
 
-1. AMHC - Episode
+4. AMHC - Episode
 ~~~~~~~~~~~~~~~~~
 
 1. :ref:`dfn-episode_key` must be an existing PMHC episode within the PMHC MDS.
@@ -36,7 +92,7 @@ Current AMHC validations
 
 .. _collection-occasion-current-validations:
 
-2. Collection Occasion
+5. Collection Occasion
 ~~~~~~~~~~~~~~~~~~~~~~
 
 1. :ref:`dfn-episode_key` must be an existing PMHC episode within the PMHC MDS.
@@ -51,7 +107,7 @@ Current AMHC validations
 
 .. _k10p-current-validations:
 
-3. K10+
+6. K10+
 ~~~~~~~
 
 1. :ref:`dfn-collection_occasion_key` must be an existing Collection Occasion within the PMHC
@@ -59,7 +115,9 @@ Current AMHC validations
 2. If both item scores and a total score are specified, the item scores must
    add up to the total score (as per :ref:`Scoring the K10+ <dfn-k10p_score>`).
 
-4. K5
+.. _k5-current-validations:
+
+7. K5
 ~~~~~
 
 1. :ref:`dfn-collection_occasion_key` must be an existing Collection Occasion within the PMHC
@@ -67,7 +125,9 @@ Current AMHC validations
 2. If both item scores and a total score are specified, the item scores must
    add up to the total score (as per :ref:`Scoring the K5 <dfn-k5_score>`).
 
-5. SDQ
+.. _sdq-current-validations:
+
+8. SDQ
 ~~~~~~
 
 1. :ref:`dfn-collection_occasion_key` must be an existing Collection Occasion within the PMHC
@@ -79,19 +139,9 @@ Current AMHC validations
 4. If both subscales and total score are specified, the sum of the subscales
    must agree with the total score (as per `Scoring the SDQ <https://docs.pmhc-mds.com/projects/data-specification/en/v2/data-model-and-specifications.html#scoring-the-sdq>`_)
 
-.. _iar-dst-current-validations:
-
-6. IAR-DST
-~~~~~~~~~~
-
-1. :ref:`dfn-collection_occasion_key` must be an existing Collection Occasion within the PMHC
-   MDS.
-2. Both all 8 domains and the level of care must be provided.
-3. The level of care must be consistent with the 8 domain scores provided.
-
 .. _amhc-service-contact-current-validations:
 
-7. AMHC - Service Contact
+9. AMHC - Service Contact
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. :ref:`dfn-service_contact_practitioner_category` is a multivalued field.

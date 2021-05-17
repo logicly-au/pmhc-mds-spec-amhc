@@ -15,7 +15,7 @@ Data model
 
 .. _data-model-diagram:
 
-.. figure:: figures/data-model.svg
+.. figure:: figures/amhc-data-model-V3.0.svg
    :alt: AMHC & PMHC data model
 
    AMHC data model *within the PMHC MDS*
