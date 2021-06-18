@@ -2571,7 +2571,8 @@ Type of organisation to which the client is being referred.
   :20: Centrelink
   :21: Other
   :22: HeadtoHelp Hub
-  :23: Non HeadtoHelp Hub PHN funded service
+  :23: Non HeadtoHelp Hub or AMHC Hub PHN funded service
+  :24: AMHC Hub
   :99: Not stated
   
   Multiple space separated values allowed
