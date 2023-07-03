@@ -4,15 +4,15 @@
 ",string,yes,"A sequence of colon separated Organisation Keys that fully specifies the Provider Organisation providing a service to the client."
 "`Episode Key`_ (episode_key)
 
-","string (2,50)",yes,"This is a number or code assigned to each episode. The Episode Key is unique and stable for each episode at the level of the organisation."
+","string [2,50]",yes,"This is a number or code assigned to each episode. The Episode Key is unique and stable for each episode at the level of the organisation."
 "`Client Key`_ (client_key)
 
-","string (2,50)",yes,"This is a number or code assigned to each individual referred to the commissioned organisation. The client identifier is unique and stable for each individual at the level of the PMHC top level organisation."
+","string [2,50]",yes,"This is a number or code assigned to each individual referred to the commissioned organisation. The client identifier is unique and stable for each individual at the level of the PMHC top level organisation."
 "`Episode - End Date`_ (episode_end_date)
 
 
 
-`METeOR ID 614094 <http://meteor.aihw.gov.au/content/index.phtml/itemId/614094>`__",date,"—","The date on which an *Episode of Care* is formally or administratively ended"
+`METeOR ID 614094 <http://meteor.aihw.gov.au/content/index.phtml/itemId/614094>`__","date [dMMyyyy]","—","The date on which an *Episode of Care* is formally or administratively ended"
 "`Episode - Client Consent to Anonymised Data`_ (client_consent)
 
 ",string,yes,":1: Yes
@@ -28,7 +28,7 @@
 :6: Episode closed administratively - other reason"
 "`Referral Date`_ (referral_date)
 
-",date,"—","The date the referrer made the referral."
+","date [dMMyyyy]","—","The date the referrer made the referral."
 "`Episode - Principal Focus of Treatment Plan`_ (principal_focus)
 
 ",string,yes,":1: Psychological therapy

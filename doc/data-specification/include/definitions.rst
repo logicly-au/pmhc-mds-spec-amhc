@@ -80,7 +80,7 @@ This is a number or code assigned to each individual referred to the commissione
 
 :Field name: client_key
 
-:Data type: string (2,50)
+:Data type: string [2,50]
 
 :Required: yes
 
@@ -95,7 +95,7 @@ The date of the collection occasion.
 
 :Field name: collection_occasion_date
 
-:Data type: date
+:Data type: date [dMMyyyy]
 
 :Required: yes
 :Notes:
@@ -211,7 +211,7 @@ This is a number or code assigned to each collection occasion of service activit
 
 :Field name: collection_occasion_key
 
-:Data type: string (2,50)
+:Data type: string [2,50]
 
 :Required: yes
 :Notes:
@@ -598,7 +598,7 @@ The date on which an *Episode of Care* is formally or administratively ended
 
 :Field name: episode_end_date
 
-:Data type: date
+:Data type: date [dMMyyyy]
 
 :Required: no
 :Notes:
@@ -752,7 +752,7 @@ This is a number or code assigned to each episode. The Episode Key is unique and
 
 :Field name: episode_key
 
-:Data type: string (2,50)
+:Data type: string [2,50]
 
 :Required: yes
 :Notes:
@@ -1631,7 +1631,7 @@ This is a number or code assigned to each intake collection occasion of service 
 
 :Field name: intake_collection_occasion_key
 
-:Data type: string (2,50)
+:Data type: string [2,50]
 
 :Required: yes
 :Notes:
@@ -1649,7 +1649,7 @@ The date on which the client first contacted the intake service
 
 :Field name: contact_date
 
-:Data type: date
+:Data type: date [dMMyyyy]
 
 :Required: no
 :Notes:
@@ -1694,7 +1694,7 @@ This is a number or code assigned to each intake. The Intake Key is unique and s
 
 :Field name: intake_key
 
-:Data type: string (2,50)
+:Data type: string [2,50]
 
 :Required: yes
 :Notes:
@@ -1779,7 +1779,7 @@ The date the intake had an outcome
 
 :Field name: outcome_date
 
-:Data type: date
+:Data type: date [dMMyyyy]
 
 :Required: no
 :Notes:
@@ -2455,7 +2455,7 @@ This is a number or code assigned to each instance of a measure. The Measure Key
 
 :Field name: measure_key
 
-:Data type: string (2,50)
+:Data type: string [2,50]
 
 :Required: yes
 :Notes:
@@ -2502,7 +2502,7 @@ A unique identifier for a practitioner within the provider organisation.
 
 :Field name: practitioner_key
 
-:Data type: string (2,50)
+:Data type: string [2,50]
 
 :Required: yes
 
@@ -2517,7 +2517,7 @@ The date the referrer made the referral to the intake service.
 
 :Field name: referral_date
 
-:Data type: date
+:Data type: date [dMMyyyy]
 
 :Required: no
 :Notes:
@@ -4225,7 +4225,7 @@ The date of each mental health service contact between a health service provider
 
 :Field name: service_contact_date
 
-:Data type: date
+:Data type: date [dMMyyyy]
 
 :Required: yes
 :Notes:
@@ -4608,7 +4608,7 @@ This is a number or code assigned to each service contact. The Service Contact K
 
 :Field name: service_contact_key
 
-:Data type: string (2,50)
+:Data type: string [2,50]
 
 :Required: yes
 :Notes:

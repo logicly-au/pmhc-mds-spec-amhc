@@ -4,10 +4,10 @@
 ",string,yes,"A sequence of colon separated Organisation Keys that fully specifies the Provider Organisation providing a service to the client."
 "`Intake Key`_ (intake_key)
 
-","string (2,50)",yes,"This is a number or code assigned to each intake. The Intake Key is unique and stable for each intake at the level of the organisation."
+","string [2,50]",yes,"This is a number or code assigned to each intake. The Intake Key is unique and stable for each intake at the level of the organisation."
 "`Client Key`_ (client_key)
 
-","string (2,50)",yes,"This is a number or code assigned to each individual referred to the commissioned organisation. The client identifier is unique and stable for each individual at the level of the PMHC top level organisation."
+","string [2,50]",yes,"This is a number or code assigned to each individual referred to the commissioned organisation. The client identifier is unique and stable for each individual at the level of the PMHC top level organisation."
 "`Intake - Outcome`_ (outcome)
 
 ",string,"—",":0: Intake open
@@ -15,13 +15,13 @@
 :2: Intake closed - client referred to a clinic"
 "`Intake - Outcome Date`_ (outcome_date)
 
-",date,"—","The date the intake had an outcome"
+","date [dMMyyyy]","—","The date the intake had an outcome"
 "`Intake - Contact Date`_ (contact_date)
 
-",date,"—","The date on which the client first contacted the intake service"
+","date [dMMyyyy]","—","The date on which the client first contacted the intake service"
 "`Referral Date`_ (referral_date)
 
-",date,"—","The date the referrer made the referral to the intake service."
+","date [dMMyyyy]","—","The date the referrer made the referral to the intake service."
 "`Referrer Profession`_ (referrer_profession)
 
 ",string,yes,":1: General Practitioner
